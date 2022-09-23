@@ -320,7 +320,9 @@ export const ALL_OPTIONS = [
     value: 'past',
     type: 'Date',
     getData() {
-      return faker.date.past();
+      const pastDate = faker.date.past().toISOString();
+      console.log('pastDate ', pastDate)
+      return pastDate;
     },
   },
   {
@@ -328,7 +330,7 @@ export const ALL_OPTIONS = [
     value: 'future',
     type: 'Date',
     getData() {
-      return faker.date.future();
+      return faker.date.future().toISOString();
     },
   },
   {
@@ -336,7 +338,7 @@ export const ALL_OPTIONS = [
     value: 'recent',
     type: 'Date',
     getData() {
-      return faker.date.recent();
+      return faker.date.recent().toISOString();
     },
   },
   {
